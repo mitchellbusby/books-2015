@@ -1,0 +1,76 @@
+
+// Colors
+$card-highlight-text: #CA2865;
+
+
+//CSS
+
+body {
+	//background-color: #E2E2E2;
+	//background-color: #e5e5e5;
+}
+.card {
+	max-width: 600px;
+	margin-top: 10px;
+	min-height: 300px;
+	//@include border-
+	//border: 1px solid rgb(221, 221, 221);
+	border: 1px solid rgb(216, 216, 216);
+	border-bottom: 3px solid rgb(216,216,216);
+	//box-shadow: rgba(0, 0, 0, 0.478431) 5px 5px 4px 0px;
+	background-color: #fff;
+	@include radius(3px);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+}
+h3.book-title {
+	color: $card-highlight-text;
+	text-align: center;
+	border-bottom: 1px solid silver;
+}
+.book-metadata {
+	text-align: center;
+}
+.book-author-year {
+	color: dimgrey;
+	font-family: "Open Sans";
+	text-transform: uppercase;
+}
+.upper-card {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.book-img {
+	text-align: center;
+
+}
+.book-img > img {
+	max-height: 200px;
+}
+.book-review {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.book-review > p {
+	margin: 0;
+}
+.book-number-badge {
+	$badge-radius: 75px;
+	width: $badge-radius;
+	height: $badge-radius;
+	background: $card-highlight-text;
+	border-radius: $badge-radius;
+	position: absolute;
+	right: 10px;
+	text-align: center;
+	box-shadow: 1px 1px 8px grey;
+	h2 {
+		margin-top: 0;
+		line-height: $badge-radius;
+		color: white;
+	}
+}
+.bottom-card {
+	padding-bottom: 25px;
+}

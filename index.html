@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="home">
+{% capture post_count %} {{site.posts | size | plus: 1 }} {% endcapture %}
+{% for post in site.posts %}
+{% capture post_count %}{{ post_count | minus: 1 }}{% endcapture %}
+  <div class="section card column small-12 medium-8 small-centered">
+    <div class="upper-card row">
+      <div class="book-number-badge"><h2>{{post_count}}</h2></div>
+      <div class="book-img column small-10 medium-4 small-centered">
+        <img src=" {{ "img/" | prepend: site.baseurl | append: post.imgsrc }} ">
+      </div>
+    </div>
+    <div class="middle-card row">
+      <div class="book-metadata column small-10 small-centered">
+        <h3 class="book-title">
+          {{post.book-title}}
+        </h3>
+        <div class="book-author-year small-centered">
+          <span class="book-author">{{post.book-author}}</span>&nbsp;|&nbsp;<span class="book-year">{{post.book-year}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-card row">
+      <div class="book-review column small-10 small-centered">
+        {{ post.content }}
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
